@@ -2,8 +2,8 @@ class usuario {
     constructor (name , surname , mascotas ,libros  ){
         this.name = name  
         this.surname = surname
-        this.mascotas = mascotas  
-        this.libros = libros 
+        this.mascotas = String  
+        this.libros = Object
     }
 
     
@@ -14,25 +14,31 @@ class usuario {
         return name + " " + surname 
      }    
 
-     addMascotas(primera,segunda,tercera){
+     addMascotas(mascotas){
             this.mascotas = []
-            this.mascotas.push(primera)
-            this.mascotas.push(segunda)
-            this.mascotas.push(tercera)
+            this.mascotas.push(mascotas)
             return this.mascotas
      }
-     
 
-     countMascotas(){
-               this.mascotas = mascotas 
-              return mascotas.lench
-     }
+    addBook(nombre, autor){
+       const libros = {
+        nombre : nombre ,
+        autor:autor
+    }
+       this.libros = libros 
+       return this.libros 
+    }
+
+    getBookNames(){
+        
+        }
+     
     }
 
  const lucas = new usuario();
  console.log(lucas.getFullName("Lucas","Valdez"))   
- console.log(lucas.addMascotas('toby','duki','terry'))
- console.log(lucas.countMascotas)
+ console.log(lucas.addMascotas('toby'))
+ console.log(lucas.addBook("principito"," luis"))   
  console.log(lucas)
 
 
